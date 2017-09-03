@@ -1,0 +1,45 @@
+group 'tbsc.dutchhelper'
+version '2.0.1'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        // for shading dependencies into jar
+        classpath 'com.github.jengelman.gradle.plugins:shadow:2.0.1'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'com.github.johnrengelman.shadow'
+
+sourceCompatibility = 1.8
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'tbsc.dutchhelper.DutchHelperApplication'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'com.googlecode.soundlibs:vorbisspi:1.0.3-1'
+    compile 'org.apache.commons:commons-lang3:3.6'
+    compile 'commons-io:commons-io:2.5'
+    compile 'org.jsoup:jsoup:1.10.3'
+    compile 'commons-cli:commons-cli:1.4'
+//    compile fileTree(dir: "lib", include: ['*.jar'])
+//    compile 'org.dkpro.jwktl:dkpro-jwktl:1.1.0'
+//    compile fileTree(dir: "lib", include: ['je-7.4.5*.jar'])
+    compile files("lib/dkpro-jwktl.jar")
+    compile 'com.sleepycat:je:5.0.73'
+}
+
+//configurations {
+//    compile.exclude group: 'com.sleepycat'
+//}
