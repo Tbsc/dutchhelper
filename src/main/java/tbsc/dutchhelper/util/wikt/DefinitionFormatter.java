@@ -162,8 +162,6 @@ public class DefinitionFormatter {
                     .append("    Past Participle: ").append(infls.get(NLInflection.PAST_PARTICIPLE)).append("\n");
         }
 
-        // TODO: Find way to have word forms, through reflection/whatever
-
         if (entry.getUsageNotes() != null) {
             result.append("  Usage: ").append(WiktionaryHelper.removeFormatting(entry.getUsageNotes().getText()));
         }
