@@ -1,6 +1,6 @@
 # dutchhelper
 
-## Abandoned. https://github.com/Tbsc/Wikdget for replacement
+### Abandoned. https://github.com/Tbsc/Wikdget for replacement
 
 Shows Wiktionary information about Dutch words.  
 Uses [DKPro JWKTL](https://dkpro.github.io/dkpro-jwktl) to parse information from Wiktionary.
